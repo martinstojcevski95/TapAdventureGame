@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "119951410599",
+    "firebase_url": "https://adventuretap-82483.firebaseio.com",
+    "project_id": "adventuretap-82483",
+    "storage_bucket": "adventuretap-82483.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119951410599:android:18abdb94b32466a0",
+        "android_client_info": {
+          "package_name": "com.GameWorldStudio.TapAdventure"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119951410599-on7ejj83o9sg1r4hul1d4kr91i32meq2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2I0o6OBel-1b8zs7J_EYtHriN3CckGOo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
