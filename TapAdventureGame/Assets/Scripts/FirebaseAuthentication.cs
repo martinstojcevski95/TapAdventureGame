@@ -21,6 +21,9 @@ public class FirebaseAuthentication : MonoBehaviour
 
     private void Start()
     {
+        //PlayerPrefs.DeleteKey("REGISTERED");
+        //PlayerPrefs.DeleteKey("EMAIL");
+        //PlayerPrefs.DeleteKey("PASS");
         isRegistered = PlayerPrefs.GetInt("REGISTERED"); //is registered go to sign in
         rememberMe = PlayerPrefs.GetInt("REMEMBERME"); // remember the user info
         SignInemailaddress = PlayerPrefs.GetString("EMAIL"); //remembers the email
