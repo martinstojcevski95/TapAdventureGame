@@ -43,6 +43,7 @@ public class SilverPerSecond : MonoBehaviour
 
     IEnumerator GenerateCurency()
     {
+
         while (true)
         {
             AutoSilverPerSec();

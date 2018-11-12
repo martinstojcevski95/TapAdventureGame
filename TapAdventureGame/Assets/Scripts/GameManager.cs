@@ -16,15 +16,8 @@ public class GameManager : MonoBehaviour
         firstTime = PlayerPrefs.GetInt("INFO");
     }
 
-    void Start()
+    private void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public IEnumerator Info()

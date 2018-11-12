@@ -98,6 +98,7 @@ public class FirebaseAuthentication : MonoBehaviour
                 PlayerPrefs.SetInt("REGISTERED", 1); //set registration to true
                 RegisterView.SetActive(false);
                 SignInView.SetActive(true);
+
             });
         }
     }

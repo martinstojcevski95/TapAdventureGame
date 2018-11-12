@@ -14,7 +14,7 @@ public class SilverPerClick : MonoBehaviour
 
     private void Start()
     {
-        iron = PlayerPrefs.GetFloat("S");
+        iron = PlayerPrefs.GetFloat("I");
         ironPerClick = PlayerPrefs.GetFloat("IPC");
     }
 
@@ -33,11 +33,12 @@ public class SilverPerClick : MonoBehaviour
         var Minute = System.DateTime.Now.Minute;
         CurrentTime.text = "Time : " + Hour + " : " + Minute;
         PlayerPrefs.SetFloat("IPC", ironPerClick);
-        PlayerPrefs.SetFloat("S", iron);
+        PlayerPrefs.SetFloat("I", iron);
     }
 
     public void OnClick()
     {
         iron += ironPerClick;
+        Debug.Log(iron);
     }
 }
