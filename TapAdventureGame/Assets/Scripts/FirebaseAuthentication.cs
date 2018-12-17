@@ -99,6 +99,7 @@ public class FirebaseAuthentication : MonoBehaviour
                 StartCoroutine(CustomLog(true));
                 Debug.LogFormat("Firebase user created successfully: {0} ({1})", newUser.DisplayName, newUser.UserId);
                 PlayerPrefs.SetInt("REGISTERED", 1); //set registration to true
+                
                 RegisterView.SetActive(false);
                 SignInView.SetActive(true);
 
@@ -137,7 +138,8 @@ public class FirebaseAuthentication : MonoBehaviour
 
 
                StartCoroutine(IsInfoClosed());
-
+               AdventurePoint adp = (AdventurePoint)FindObjectOfType(typeof(AdventurePoint));
+               adp.enabled = true;
              
            });
         } 
