@@ -17,6 +17,7 @@ public class AdventurePoint : MonoBehaviour
 
         waitTime =  600; //600; // 3600 seconds = 1hour;
         AdventurePoints = PlayerPrefs.GetInt("ADPOINTS");
+        AdventurePoints = 50;
         InvokeRepeating("GenerateAdventurePointsPerSec", 0, waitTime);
         AdventurePointsPerSec = 1;
         //StartCoroutine(GenerateAdventurePointsPerSec());
@@ -26,7 +27,7 @@ public class AdventurePoint : MonoBehaviour
     void Update()
     {
         IncreaseAdventurePoints();
-       
+
     }
 
 

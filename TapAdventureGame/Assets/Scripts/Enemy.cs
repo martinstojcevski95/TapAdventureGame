@@ -10,6 +10,6 @@ public class Enemy : ScriptableObject {
     public float Health;
     public float Damage;
     public int level;
-
+    public float enemyLevelDrop;
     // add something that will make drops from the enemy
 }

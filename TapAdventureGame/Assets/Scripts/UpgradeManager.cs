@@ -31,10 +31,13 @@ public class UpgradeManager : MonoBehaviour {
     void UpdateInfo()
     {
         gameObject.name = ItemName;
+        if(currencyValue == CurrencyValue.Iron)
+            ItemInfo.text = ItemName + "\nCost: " + cost + " " + currencyValue;
+
         if (currencyValue == CurrencyValue.Silver)
-            ItemInfo.text = ItemName + "\nCost: " + currencyValue + " " + cost;
+            ItemInfo.text = ItemName + "\nCost: " + cost + " " + currencyValue;
         if(currencyValue == CurrencyValue.Gold)
-            ItemInfo.text = ItemName + "\nCost: " + currencyValue + cost;
+            ItemInfo.text = ItemName + "\nCost: " + cost + currencyValue;
 
         if (tempSlider != null)
             tempSlider.value = _CurrencyPerClick.iron /cost * 100;
@@ -53,6 +56,7 @@ public class UpgradeManager : MonoBehaviour {
 
     enum CurrencyValue
     {
+        Iron,
         Silver,
         Gold,
         Platinum
