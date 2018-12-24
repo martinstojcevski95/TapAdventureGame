@@ -8,11 +8,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54fa87d36147ade4d85e00768f16b3e3, type: 3}
-  m_Name: Knight
+  m_Script: {fileID: 11500000, guid: 1534e36eed8d7ad42b03832403c62dc2, type: 3}
+  m_Name: Old Sword
   m_EditorClassIdentifier: 
-  Name: Knight
-  Health: 15
-  Damage: 0
-  level: 0
-  enemyLevelDrop: 0
+  _ItemName: Old Sword
+  _ItemCost: 20000
+  _ClickPower: 0
+  _Damage: 12
+  ItemImage: {fileID: 0}
