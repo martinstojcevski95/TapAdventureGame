@@ -17,37 +17,24 @@ public class AdventurePoint : MonoBehaviour
 
         waitTime =  600; //600; // 3600 seconds = 1hour;
         AdventurePoints = PlayerPrefs.GetInt("ADPOINTS");
-        AdventurePoints = 50;
+        //AdventurePoints = 50;
         InvokeRepeating("GenerateAdventurePointsPerSec", 0, waitTime);
         AdventurePointsPerSec = 1;
-        //StartCoroutine(GenerateAdventurePointsPerSec());
     }
 
-    // Update is called once per frame
     void Update()
     {
-        IncreaseAdventurePoints();
-
+        AdventurePointsUI();
     }
 
 
-    void IncreaseAdventurePoints()
+    void AdventurePointsUI()
     {
         AdventurePointsText.text = "AP" + " " + AdventurePoints.ToString();
         AdventurePointsPerSecond.text = AdventurePointsPerSec.ToString() + " " + "AP/ " + waitTime + " Sec ";
     }
-    void GenerateAdventurePointsPerSec()
-    {
-        AdventurePoints += 1;
-        PlayerPrefs.SetInt("ADPOINTS", AdventurePoints);
 
-    }
-    //IEnumerator GenerateAdventurePointsPerSec()
-    //{
-    //    yield return new WaitForSeconds(waitTime);
-    //    AdventurePoints += 1;
 
-    //}
 
     //Here i will implement incrementation to adventurepointsperclick while the app is closed
 }

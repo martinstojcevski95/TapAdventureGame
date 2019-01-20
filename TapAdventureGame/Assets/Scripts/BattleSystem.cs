@@ -7,7 +7,6 @@ public class BattleSystem : MonoBehaviour {
 
 
  
-
     public void GoToAdventureMode()
     {
         AdventurePoint adp = (AdventurePoint)FindObjectOfType(typeof(AdventurePoint));

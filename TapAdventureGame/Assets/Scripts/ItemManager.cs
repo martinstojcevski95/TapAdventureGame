@@ -9,6 +9,7 @@ public class ItemManager : MonoBehaviour
     [SerializeField] Text ItemInfo;
     [SerializeField] SilverPerClick _CurrencyPerClick;
     [SerializeField] Item item;
+    [SerializeField] CurrencyValue currencyValue;
     [SerializeField]
     Image ItemImage;
     string ItemName;
@@ -18,6 +19,7 @@ public class ItemManager : MonoBehaviour
     float clickPower;
     [SerializeField] Color affordableColor;
     Slider tempSlider;
+
     private void Start()
     {
         baseCost = cost;
@@ -34,9 +36,27 @@ public class ItemManager : MonoBehaviour
 
     void UpdateInfo()
     {
-        gameObject.name = ItemName + item._ItemName;
-        ItemInfo.text = ItemName + item._ItemName + " \nCost: " + item._ItemCost + " \nClickPower :" + item._ClickPower;//" \nSilver " + tickValue + " /s";
-        ItemImage.GetComponent<Image>().sprite = item.ItemImage;
+        gameObject.name = ItemName;
+        if (currencyValue == CurrencyValue.Iron)
+        {
+            ItemInfo.text = ItemName + item._ItemName + " \nCost: " + item._ItemCost + " \nClickPower :" + item._ClickPower;//" \nSilver " + tickValue + " /s";
+            ItemImage.GetComponent<Image>().sprite = item.ItemImage;
+        }
+
+        if (currencyValue == CurrencyValue.Silver)
+   {
+            ItemInfo.text = ItemName + item._ItemName + " \nCost: " + item._ItemCost + " \nClickPower :" + item._ClickPower;//" \nSilver " + tickValue + " /s";
+            ItemImage.GetComponent<Image>().sprite = item.ItemImage;
+        }
+        if (currencyValue == CurrencyValue.Gold)
+        {
+            ItemInfo.text = ItemName + item._ItemName + " \nCost: " + item._ItemCost + " \nClickPower :" + item._ClickPower;//" \nSilver " + tickValue + " /s";
+            ItemImage.GetComponent<Image>().sprite = item.ItemImage;
+        }
+
+      //  gameObject.name = ItemName + item._ItemName;
+      //  ItemInfo.text = ItemName + item._ItemName + " \nCost: " + item._ItemCost + " \nClickPower :" + item._ClickPower;//" \nSilver " + tickValue + " /s";
+//ItemImage.GetComponent<Image>().sprite = item.ItemImage;
 
 
         if (tempSlider != null)
@@ -66,5 +86,15 @@ public class ItemManager : MonoBehaviour
         }
        
 
+    }
+
+
+
+    enum CurrencyValue
+    {
+        Iron,
+        Silver,
+        Gold,
+        Platinum
     }
 }

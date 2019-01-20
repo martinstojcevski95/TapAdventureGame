@@ -13,7 +13,7 @@ public class UpgradeManager : MonoBehaviour {
     public string ItemName;
     private float baseCost;
     public float valuePerSec;
-    [SerializeField] Color standardColor, affordableColor;
+    [SerializeField] Color affordableColor;
     Slider tempSlider;
 
     private void Start()
@@ -39,8 +39,20 @@ public class UpgradeManager : MonoBehaviour {
         if(currencyValue == CurrencyValue.Gold)
             ItemInfo.text = ItemName + "\nCost: " + cost + currencyValue;
 
+
         if (tempSlider != null)
-            tempSlider.value = _CurrencyPerClick.iron /cost * 100;
+        {
+            tempSlider.value = _CurrencyPerClick.iron / cost * 100;
+            if (tempSlider.value >= 100)
+            {
+                this.gameObject.transform.GetChild(3).GetComponent<Button>().interactable = true;
+                tempSlider.GetComponentInChildren<Image>().color = affordableColor;
+            }
+            else
+                this.gameObject.transform.GetChild(3).GetComponent<Button>().interactable = false;
+        }
+       // if (tempSlider != null)
+         //   tempSlider.value = _CurrencyPerClick.iron /cost * 100;
 
     }
 

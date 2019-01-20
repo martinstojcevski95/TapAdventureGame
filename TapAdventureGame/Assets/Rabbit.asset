@@ -15,4 +15,4 @@ MonoBehaviour:
   Health: 1
   Damage: 1
   level: 1
-  enemyLevelDrop: 0.2
+  enemyLevelDrop: 0.1
