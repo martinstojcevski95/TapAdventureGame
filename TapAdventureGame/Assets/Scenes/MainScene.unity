@@ -773,6 +773,11 @@ MonoBehaviour:
   spc: {fileID: 1262453404}
   iron: 0
   ironPerClick: 1
+  mineWaitTime: 0
+  oldMineWaitTime: 0
+  affordableColor: {r: 0.18209119, g: 0.16015486, b: 0.5754717, a: 1}
+  waitingColor: {r: 0.20392157, g: 0.40784314, b: 0.59607846, a: 1}
+  MinePerClick: {fileID: 939435825}
 --- !u!4 &91711184
 Transform:
   m_ObjectHideFlags: 0
